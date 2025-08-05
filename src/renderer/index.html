@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChatGPT-Like Prompt UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Chat input container fixed near bottom -->
+    <div class="chat-input-container">
+      <!-- Input card -->
+      <div class="card">
+        <!-- Prompt input area -->
+        <textarea
+          id="prompt-input"
+          class="prompt-input"
+          placeholder="Type your message or prompt here..."
+        ></textarea>
+
+        <!-- Button row inside card -->
+        <div class="top-buttons">
+          <div style="display: flex">
+            <button id="attach-button" class="icon-button">
+              <span class="material-symbols-outlined">attach_file</span>
+            </button>
+          </div>
+
+          <!-- Mic button -->
+          <div style="display: flex; gap: 8px">
+            <button id="mic-button" class="icon-button">
+              <span class="material-symbols-outlined">mic</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category buttons below card -->
+      <!-- <div class="bottom-buttons">
+        <button>🌐 Websites</button>
+        <button>💻 Web Apps</button>
+        <button>📱 Mobile Apps</button>
+        <button>🎮 Games</button>
+      </div> -->
+    </div>
+
+    <!-- JavaScript -->
+    <script src="microphone.js"></script>
+  </body>
+</html>
