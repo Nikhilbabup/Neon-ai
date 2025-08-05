@@ -12,40 +12,40 @@
   </head>
   <body>
     <!-- Chat input container fixed near bottom -->
-    <div class="chat-input-container">
-      <!-- Input card -->
-      <div class="card">
-        <!-- Prompt input area -->
-        <textarea
-          id="prompt-input"
-          class="prompt-input"
-          placeholder="Type your message or prompt here..."
-        ></textarea>
+    <div class="chat-wrapper">
+      <div id="chat" class="chat-container"></div>
 
-        <!-- Button row inside card -->
-        <div class="top-buttons">
-          <div style="display: flex">
-            <button id="attach-button" class="icon-button">
-              <span class="material-symbols-outlined">attach_file</span>
-            </button>
-          </div>
+      <div class="chat-input-container">
+        <div class="card">
+          <textarea
+            id="prompt-input"
+            class="prompt-input"
+            placeholder="Type your message or prompt here..."
+          ></textarea>
 
-          <!-- Mic button -->
-          <div style="display: flex; gap: 8px">
-            <button id="mic-button" class="icon-button">
-              <span class="material-symbols-outlined">mic</span>
-            </button>
+          <div class="top-buttons">
+            <div style="display: flex">
+              <button id="attach-button" class="icon-button">
+                <span class="material-symbols-outlined">attach_file</span>
+              </button>
+            </div>
+
+            <div style="display: flex; gap: 8px">
+              <button id="mic-button" class="icon-button">
+                <span class="material-symbols-outlined">mic</span>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Category buttons below card -->
-      <!-- <div class="bottom-buttons">
-        <button>🌐 Websites</button>
-        <button>💻 Web Apps</button>
-        <button>📱 Mobile Apps</button>
-        <button>🎮 Games</button>
-      </div> -->
+        <!-- Category buttons below card -->
+        <div class="bottom-buttons">
+          <button>🌐 Websites</button>
+          <button>💻 Web Apps</button>
+          <button>📱 Mobile Apps</button>
+          <button>🎮 Games</button>
+        </div>
+      </div>
     </div>
 
     <!-- JavaScript -->

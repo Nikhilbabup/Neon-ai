@@ -1,4 +1,5 @@
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
 
 if (!SpeechRecognition) {
   alert("Your browser does not support Speech Recognition.");
@@ -82,14 +83,32 @@ function submitPrompt() {
   if (message) {
     console.log("Submitting:", message);
     // Add backend call or UI handling here
+    addMessage(message, "user");
+
     textarea.value = ""; // Clear input after submission
   }
 }
 
 // Submit on Enter
-document.getElementById("prompt-input").addEventListener("keydown", function (e) {
-  if (e.key === "Enter" && !e.shiftKey) {
-    e.preventDefault();
-    submitPrompt();
-  }
-});
+document
+  .getElementById("prompt-input")
+  .addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      submitPrompt();
+    }
+  });
+const chatContainer = document.getElementById("chat");
+function addMessage(text, sender) {
+  if (!chatContainer) return;
+
+  const msg = document.createElement("div");
+  msg.className = `message ${sender}-message`;
+  msg.textContent = text;
+  chatContainer.appendChild(msg);
+  return msg;
+}
+function scrollToBottom() {
+  const chat = document.getElementById("chat");
+  chat.scrollTop = chat.scrollHeight;
+}
